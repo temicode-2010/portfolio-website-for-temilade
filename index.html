@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio - Atunde Temilade</title>
+
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav
+      id="navbar-top"
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
+    >
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d"
+          >Portfolio</a
+        >
+        <button
+          class="nav-menu d-md-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-menu-button-fill"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button>
+      </div>
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- home section starts  -->
+    <section class="home pt-5 pb-5" id="home">
+      <div class="row justify-content-evenly align-middle">
+        <!-- here data-aos is used for adding aos animation  -->
+        <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
+          <h2 style="color: #3f396d">
+            Hello! I Am <br /><span class="c-orange">Atunde Temilade</span>
+          </h2>
+          <p class="text-muted">
+            I'm A Web Developer having 10 years of experience in expertise of
+            creating website with fully responsive Also with backend part too.
+          </p>
+        <a href="#contact"><button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+            Hire Me
+          </button></a>
+          <a href="" class="link ms-4 d-none">See My Work</a>
+        </div>
+        <div class="col-10 col-md-4 d-none d-md-block">
+          <img src="" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- expertise section starts -->
+    <section class="expertise mt-5" id="service">
+      <div class="heading text-center">
+        <small>My Expertise</small>
+        <h3>
+          Provide Wide Range of <br />
+          Digital Services
+        </h3>
+      </div>
+      <div class="row justify-content-evenly mt-5">
+        <div class="col-10 col-md-4" data-aos="fade-up">
+          <div class="service-card">
+            <div class="img">
+              <img
+                src="data:image/png;base64,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"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h4>App Development</h4>
+              <p class="text-muted">
+               
+              </p>
+              <a href="" class="link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-10" data-aos="fade-up">
+          <div class="service-card">
+            <div class="img">
+              <img
+                src="https://www.google.com/search?q=web+development&client=firefox-b-d&sca_esv=b82d5f7397a53474&udm=2&source=iu&ictx=1&vet=1&fir=uehPnbAg10WQEM%252CYnzI6vVJ6rG0bM%252C%252Fm%252F02wdy8%253BurFJ7LpkThsGIM%252CCzOvWvI1nvbJqM%252C_%253BA0WNbThB4dRWvM%252C2OuHgojAyP8eVM%252C_%253B6Bhozqmo9vnehM%252CA1RY8FYyC9gHTM%252C_%253BvWGfcuKELKftMM%252Cc6bO6TyWM-SzPM%252C_%253BneE-2abTYetlAM%252CR9nXlz1z9ClYFM%252C_&usg=AI4_-kQaZQOggoisov9zxAGgTI23fcbOGw&sa=X&ved=2ahUKEwiKhNW5qcyHAxVWUUEAHVynAigQ_B16BAglEAE#vhid=uehPnbAg10WQEM&vssid=mosaic"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h4>Frontend Development</h4>
+              <p class="text-muted">
+               
+              </p>
+              <a href="" class="link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-10" data-aos="fade-up">
+          <div class="service-card">
+            <div class="img">
+              <img
+                src="https://www.google.com/search?q=web+development&client=firefox-b-d&sca_esv=b82d5f7397a53474&udm=2&source=iu&ictx=1&vet=1&fir=uehPnbAg10WQEM%252CYnzI6vVJ6rG0bM%252C%252Fm%252F02wdy8%253BurFJ7LpkThsGIM%252CCzOvWvI1nvbJqM%252C_%253BA0WNbThB4dRWvM%252C2OuHgojAyP8eVM%252C_%253B6Bhozqmo9vnehM%252CA1RY8FYyC9gHTM%252C_%253BvWGfcuKELKftMM%252Cc6bO6TyWM-SzPM%252C_%253BneE-2abTYetlAM%252CR9nXlz1z9ClYFM%252C_&usg=AI4_-kQaZQOggoisov9zxAGgTI23fcbOGw&sa=X&ved=2ahUKEwiKhNW5qcyHAxVWUUEAHVynAigQ_B16BAglEAE#vhid=uehPnbAg10WQEM&vssid=mosaic"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h4>Backend Development</h4>
+              <p class="text-muted">
+                
+              </p>
+              <a href="" class="link">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- expertise section ends here -->
+
+    <!-- skill section starts -->
+    <section class="skill mt-5 py-5" id="about">
+      <div class="row justify-content-evenly">
+        <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+          <div class="row justify-content-evenly">
+            <div class="col-10 col-md-6">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress html-css">
+                  <span class="progress-value html-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">HTML & CSS</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-6 mt-4 mt-md-0">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress javascript">
+                  <span class="progress-value javascript-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-evenly mt-4">
+            <div class="col-10 col-md-6">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress php">
+                  <span class="progress-value php-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">Python</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-6 mt-4 mt-md-0">
+              <div class="progress-card ms-3  ms-md-0">
+                <div class="circular-progress reactjs">
+                  <span class="progress-value reactjs-progress">0%</span>
+                </div>
+                <br>
+                <span class="text">Java</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
+          <div class="heading mt-5 mt-md-3">
+            <small>My Skills</small>
+            <h3>Beautiful & Unique Digital Experiences</h3>
+            <p class="text-muted">
+             
+            </p>
+            <p class="text-muted">
+             
+            </p>
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+              <!-- here download attribute is used for adding download functionality to button  -->
+              <a
+                href="resume.html"
+                download="resume.html"
+                style="text-decoration: none;color: #fff;"
+                >Download CV</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill section end here -->
+
+    <!-- portfolio section starts here -->
+    <section class="portfolio" id="portfolio">
+      <div class="heading text-center pt-5">
+        <small>Creative Work</small>
+        <h3>Check My Portfolio</h3>
+      </div>
+
+      <div id="myBtnContainer" class="text-center mt-4">
+        <!-- here we will create custom attribute using data- for filtering -->
+        <button class="filter-item" data-filter="all">All</button>
+        <button class="filter-item" data-filter="game">Game</button>
+        <button class="filter-item" data-filter="webapp">Web App</button>
+        <button class="filter-item" data-filter="website">Website</button>
+        <button class="filter-item" data-filter="brand">Brand</button>
+      </div>
+      <a href="2048.html">
+      <div class="portfolio-body">
+        <div class="row justify-content-evenly px-4">
+          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="https://www.codewithfaraz.com/img/create%20your%20own%202048%20game%20online%20with%20html,%20css%20and%20javascript%20(source%20code).jpg" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">2048 Game</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Game</span
+                ><br />
+                <a href="#" class="link">Read More</a>
+              </div>
+            </div>
+          </div></a>
+          <a href="converter.html">
+          <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img
+                src="https://codingtorque.com/wp-content/uploads/2023/01/3-38-1024x576.png.webp"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h4 class="card-title">Converter App</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Website</span
+                ><br />
+                <a href="#" class="read-more-btn link">Read More</a>
+              </div>
+            </div>
+          </div></a>
+          <a href="dictionary.html">
+          <div class="post col-md-4 webapp all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTviBBwTN279EItpAeVxxvSJaBPj9NmhR0j2t9dBczJziOGAZ7m" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">Dictionary</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">WebApp</span
+                ><br />
+                <a href="#" class="read-more-btn link">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div></a>
+        <a href="image editor.html">
+        <div class="row justify-content-evenly mt-4 px-4">
+          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="https://www.codingnepalweb.com/wp-content/uploads/2022/07/Build-An-Image-Editor-in-HTML-CSS-JavaScript.jpg" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">PicEditor App</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">App</span
+                ><br />
+                <a href="#" class="read-more-btn link">Read More</a>
+              </div>
+            </div>
+          </div></a>
+          <a href="speed.html">
+          <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="https://www.codingnepalweb.com/wp-content/uploads/2022/01/Typing-Speed-Test-Game-in-HTML-CSS-JavaScript.jpg" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">Typing speed test</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Game</span
+                ><br />
+                <a href="#" class="read-more-btn link">Read More</a>
+              </div>
+            </div>
+          </div></a>
+          <a href="chatbot.html">
+          <div class="post col-md-4 all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img
+                src="https://www.codewithfaraz.com/img/create%20your%20own%20chatbot%20with%20html,%20css,%20and%20javascript.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h4 class="card-title">Chatbot</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Web App</span
+                ><br />
+                <a href="#" class="read-more-btn link">Read More</a>
+              </div>
+            </div>
+          </div></a>
+          <a href="weather.html">
+          <div class="post col-md-4 all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img
+                src="https://www.codingnepalweb.com/wp-content/uploads/2021/08/Build-Weather-App-in-JavaScript.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h4 class="card-title">Weather app</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Web App</span
+                ><br />
+                <a href="#" class="read-more-btn link">Read More</a>
+              </div>
+            </div>
+          </div></a>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio section ends here -->
+
+    <!-- testimonial section starts  -->
+    <section class="testimonial mt-5 pt-5" id="testimonial">
+      <div class="row justify-content-evenly">
+        <div class="col-md-4 col-10" data-aos="slide-right">
+          <img src="images/tastimonials-img.png" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-6 col-10 mt-5" data-aos="slide-left">
+          <div class="heading">
+            <small>Testimonials</small>
+            <h3>Happy Clients Feedback</h3>
+            <!-- here we will use carousel element from bootstrap -->
+            <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        A very good Web developer 
+                      </p>
+                      <h4>Mrs Bridget Olayisade</h4>
+                      <small class="fs-6 text-muted">CEO of Globak Private School</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                    He gives a website with such a great design and a great functionality.
+                      </p>
+                      <h4>Olugbenga Agboola</h4>
+                      <small class="fs-6 text-muted">CEO of flutterwave</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                       A great web developer who gives quick feedback
+                      </p>
+                      <h4>Mrs Bridget Olayisade Adebisi</h4>
+                      <small class="fs-6 text-muted">Founder of Globak Private School</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="nextprev-btn rounded-pill prev-btn"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <i class="bi bi-arrow-left-circle-fill prev"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="nextprev-btn rounded-pill next-btn"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <i class="bi bi-arrow-right-circle-fill next"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial ends here -->
+
+            
+    <!-- contact section starts -->
+    <section class="contact py-5" id="contact">
+      <div class="heading text-center">
+        <small>Get in Touch</small>
+        <h3>Any Questions? Feel Free to Contact</h3>
+      </div>
+      <div class="row justify-content-evenly mt-5">
+        <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>Lagos, Nigeria </p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>+2349065147921</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-send-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>temiladeatunde@gmail.com</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-globe-americas"></i>
+            </div>
+            <div class="col-11">
+              <p>temmyz.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
+          <div class="contact-form">
+            <div class="mb-3">
+              <form action="mailto:temiladeatunde@gmail.com">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Mobile No."
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Message"
+                rows="5"
+              ></textarea>
+            </div>
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+              Submit
+            </button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section ends here -->
+
+      <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- footer section starts  -->
+    <footer class="text-center text-muted py-4">
+      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+      <div class="link-group mt-5" data-aos="fade-up">
+        <a href="#home">Home</a>
+        <div class="vr"></div>
+        <a href="#about">About</a>
+        <div class="vr"></div>
+        <a href="#service">Service</a>
+        <div class="vr"></div>
+        <a href="#portfolio">Portfolio</a>
+        <div class="vr"></div>
+        <a href="#blog">Blog</a>
+        <div class="vr"></div>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-links mt-5" data-aos="fade-up">
+        <button href="" class="rounded-pill dribble">
+          <i class="bi bi-linkedin"></i>
+        </button>
+        <button href="" class="rounded-pill whatsapp">
+          <i class="bi bi-whatsapp"></i>
+        </button>
+        <button href="" class="rounded-pill behance">
+          <i class="bi bi-facebook"></i>
+        </button>
+      </div>
+      <hr class="text-muted my-4" />
+
+      <p>Copyright 2024 Portfolio | All Rights Reserved.</p>
+    </footer>
+    <!-- footer section ends here -->
+
+      <!-- bootstrap javascript cdn link  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS library javascript link  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // initializing AOS library
+      AOS.init({
+        duration: 1000,
+        offset: 50,
+      });
+    </script>
+    <!-- custom js file linking -->
+    <script src="script.js"></script>
+    
+  </body>
+</html>
